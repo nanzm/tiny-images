@@ -1,6 +1,6 @@
 {
   "name": "tiny-images",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Smart PNG and JPEG compression。",
   "bin": {
     "tiny": "bin/tiny"

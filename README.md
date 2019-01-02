@@ -2,10 +2,11 @@
 
 Smart PNG and JPEG compression
 
-## 安装
+## 全局安装
 
 ```
-npm i -g tiny-images
+npm install -g tiny-images
+
 ```
 
 ## 使用方法
