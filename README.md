@@ -1,11 +1,11 @@
-# tiny-cli
+# tiny-images
 
 Smart PNG and JPEG compression
 
 ## 安装
 
 ```
-npm i -g tiny-cli
+npm i -g tiny-images
 ```
 
 ## 使用方法

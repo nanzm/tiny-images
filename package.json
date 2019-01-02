@@ -1,5 +1,5 @@
 {
-  "name": "tiny-cli",
+  "name": "tiny-images",
   "version": "1.0.0",
   "description": "Smart PNG and JPEG compression。",
   "bin": {
