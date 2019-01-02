@@ -23,12 +23,18 @@ async function main () {
 
     // 去压缩
     tinify.key = keyObj.APIKey
-    findFile(pwdPath, (err, file) => {
+
+    findFile(pwdPath, async (err, file) => {
       if (err) return console.error(err)
 
       const ext = path.extname(file)
       if (ext === '.png' || ext === '.jpg' || ext === '.jpeg') {
+        console.log(file)
+
         const source = tinify.fromFile(file)
+
+        await fs.ensureDir(pwdPath + '/tiny')
+
         const time = Date.now()
         source.toFile(pwdPath + '/tiny/' + time + ext)
       }

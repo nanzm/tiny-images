@@ -22,7 +22,7 @@ module.exports = function findFile (filePath, callback) {
         if (stats.isFile()) return callback(null, filedir)
 
         //文件夹递归
-        if (stats.isDirectory()) return fileDisplay(filedir, callback)
+        if (stats.isDirectory()) return findFile(filedir, callback)
       })
     })
   })
