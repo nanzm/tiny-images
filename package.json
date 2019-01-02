@@ -1,0 +1,33 @@
+{
+  "name": "tiny-cli",
+  "version": "1.0.0",
+  "description": "Smart PNG and JPEG compression。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nanzm/tiny-cli.git"
+  },
+  "keywords": [
+    "jpg",
+    "jpeg",
+    "png",
+    "tiny",
+    "tinypng",
+    "cli",
+    "compress"
+  ],
+  "author": "nan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nanzm/tiny-cli/issues"
+  },
+  "homepage": "https://github.com/nanzm/tiny-cli#readme",
+  "dependencies": {
+    "fs-extra": "^7.0.1",
+    "inquirer": "^6.2.1",
+    "tinify": "^1.6.0-beta.2"
+  }
+}
