@@ -13,7 +13,7 @@ const questions = [
         return true
       }
 
-      return 'Please enter a valid API Key'
+      return 'Please enter a valid API Key (https://tinypng.com/developers)'
     }
   }
 ]

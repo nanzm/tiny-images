@@ -4,26 +4,26 @@ const path = require('path')
 const fs = require('fs')
 
 /**
- * 递归查找文件
+ *
  * @param filePath
- * @param callback
  */
-module.exports = function findFile (filePath, callback) {
-  fs.readdir(filePath, function (err, files) {
-    if (err) return callback(err)
+function findFile (filePath) {
+  return new Promise((resolve, reject) => {
+    const fileArray = []
 
-    files.forEach(function (filename) {
-      const filedir = path.join(filePath, filename)
+    fs.readdir(filePath, function (err, files) {
+      if (err) return reject(err)
 
-      fs.stat(filedir, function (eror, stats) {
-        if (eror) return callback(eror)
-
-        // 文件
-        if (stats.isFile()) return callback(null, filedir)
-
-        //文件夹递归
-        if (stats.isDirectory()) return findFile(filedir, callback)
+      files.forEach(function (filename) {
+        const filedir = path.join(filePath, filename)
+        const stats = fs.statSync(filedir)
+        if (stats.isFile()) return fileArray.push(filedir)
       })
+
+      resolve(fileArray)
     })
   })
 }
+
+module.exports = findFile
+
